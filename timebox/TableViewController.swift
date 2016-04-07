@@ -1,15 +1,15 @@
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UITextFieldDelegate {
     var timers: [Timer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timers.append(Timer())
+        timers.append(Timer.empty())
     }
     
     @IBAction func addButtonTapped() {
-        self.timers.append(Timer())
+        self.timers.append(Timer.empty())
         self.tableView.reloadData()
     }
     
@@ -57,5 +57,12 @@ class TableViewController: UITableViewController {
         default:
             break
         }
+    }
+    
+    // MARK: - Text field delegate
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        timers[textField.tag] = timers[textField.tag].rename(textField.text ?? "")
+        tableView.reloadData()
     }
 }

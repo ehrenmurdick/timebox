@@ -25,6 +25,7 @@ class TimerCell: UITableViewCell {
         nameTextField.text = timer.name
         toggleButton.setTitle(timer.prompt, forState: .Normal)
         toggleButton.tag = tag
+        nameTextField.tag = tag
         
         self.timer = timer
         

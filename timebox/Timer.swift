@@ -4,7 +4,7 @@ struct Timer {
     var startTime: NSDate?
     var savedDuration: NSTimeInterval
     
-    var name: String = ""
+    var name: String
     
     var isActive: Bool {
         return startTime != nil
@@ -31,13 +31,8 @@ struct Timer {
         return currentElapsed + savedDuration
     }
     
-    init() {
-        savedDuration = 0
-    }
-    
-    init(startTime: NSDate?, duration: NSTimeInterval) {
-        self.startTime = startTime
-        self.savedDuration = duration
+    static func empty() -> Timer {
+        return Timer(startTime: nil, savedDuration: 0, name: "")
     }
     
     func toggle() -> Timer {
@@ -52,10 +47,14 @@ struct Timer {
         guard self.startTime == nil
             else { return self }
         
-        return Timer(startTime: NSDate(), duration: savedDuration)
+        return Timer(startTime: NSDate(), savedDuration: savedDuration, name: name)
     }
     
     func stop() -> Timer {
-        return Timer(startTime: nil, duration: duration)
+        return Timer(startTime: nil, savedDuration: duration, name: name)
+    }
+    
+    func rename(name: String) -> Timer {
+        return Timer(startTime: startTime, savedDuration: duration, name: name)
     }
 }

@@ -39,6 +39,9 @@
                                             <rect key="frame" x="52" y="13" width="494" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="byV-bU-5RS" id="4mo-ea-qA9"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>
