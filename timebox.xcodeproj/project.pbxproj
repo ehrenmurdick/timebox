@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723556031CB60B5500D60A66 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723556021CB60B5500D60A66 /* TableViewController.swift */; };
+		723556051CB60BB100D60A66 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723556041CB60BB100D60A66 /* Timer.swift */; };
+		7235560C1CB6137400D60A66 /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7235560B1CB6137400D60A66 /* FAButton.swift */; };
 		723AF6FB1CB60A3800045953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AF6FA1CB60A3800045953 /* AppDelegate.swift */; };
-		723AF6FD1CB60A3800045953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AF6FC1CB60A3800045953 /* ViewController.swift */; };
 		723AF7001CB60A3800045953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723AF6FE1CB60A3800045953 /* Main.storyboard */; };
 		723AF7021CB60A3800045953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723AF7011CB60A3800045953 /* Assets.xcassets */; };
 		723AF7051CB60A3800045953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723AF7031CB60A3800045953 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		723556091CB612F300D60A66 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		723556021CB60B5500D60A66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		723556041CB60BB100D60A66 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		7235560B1CB6137400D60A66 /* FAButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
 		723AF6F71CB60A3800045953 /* timebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723AF6FA1CB60A3800045953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		723AF6FC1CB60A3800045953 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		723AF6FF1CB60A3800045953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		723AF7011CB60A3800045953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723AF7041CB60A3800045953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,11 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				723AF6FA1CB60A3800045953 /* AppDelegate.swift */,
-				723AF6FC1CB60A3800045953 /* ViewController.swift */,
 				723AF6FE1CB60A3800045953 /* Main.storyboard */,
+				723556021CB60B5500D60A66 /* TableViewController.swift */,
+				723556041CB60BB100D60A66 /* Timer.swift */,
 				723AF7011CB60A3800045953 /* Assets.xcassets */,
 				723AF7031CB60A3800045953 /* LaunchScreen.storyboard */,
 				723AF7061CB60A3800045953 /* Info.plist */,
+				7235560B1CB6137400D60A66 /* FAButton.swift */,
 			);
 			path = timebox;
 			sourceTree = "<group>";
@@ -74,6 +92,7 @@
 				723AF6F31CB60A3800045953 /* Sources */,
 				723AF6F41CB60A3800045953 /* Frameworks */,
 				723AF6F51CB60A3800045953 /* Resources */,
+				723556091CB612F300D60A66 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -135,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723AF6FD1CB60A3800045953 /* ViewController.swift in Sources */,
+				7235560C1CB6137400D60A66 /* FAButton.swift in Sources */,
+				723556051CB60BB100D60A66 /* Timer.swift in Sources */,
 				723AF6FB1CB60A3800045953 /* AppDelegate.swift in Sources */,
+				723556031CB60B5500D60A66 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +270,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = timebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.timebox;
@@ -260,6 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = timebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.timebox;
@@ -286,6 +315,7 @@
 				723AF70B1CB60A3800045953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
