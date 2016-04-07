@@ -10,12 +10,12 @@
         <scene sceneID="usc-2I-s9g">
             <objects>
                 <tableViewController id="byV-bU-5RS" customClass="TableViewController" customModule="timebox" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g4p-lK-2bP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g4p-lK-2bP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timer" id="YBI-n1-kIJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timer" id="YBI-n1-kIJ" customClass="TimerCell" customModule="timebox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBI-n1-kIJ" id="s2I-6B-p88">
@@ -25,6 +25,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaf-QW-HoE" userLabel="Start">
                                             <rect key="frame" x="8" y="8" width="34" height="27"/>
                                             <state key="normal" title="Start"/>
+                                            <connections>
+                                                <action selector="timerButtonTapped:" destination="byV-bU-5RS" eventType="touchUpInside" id="dX6-lk-We4"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-0H-h7f" userLabel="Name">
                                             <rect key="frame" x="52" y="8" width="45" height="27"/>
@@ -52,6 +55,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <connections>
+                                    <outlet property="dateFormatter" destination="b8V-s8-I7E" id="owe-jt-fYb"/>
+                                    <outlet property="durationLabel" destination="uFl-1T-ODh" id="27f-ae-9aY"/>
+                                    <outlet property="nameLabel" destination="o9b-0H-h7f" id="4Kk-s3-b13"/>
+                                    <outlet property="toggleButton" destination="iaf-QW-HoE" id="ol3-Rk-hlN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,6 +71,7 @@
                     <navigationItem key="navigationItem" id="1yw-t7-whc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSS-Fw-03G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="b8V-s8-I7E" customClass="NSDateComponentsFormatter"/>
             </objects>
             <point key="canvasLocation" x="1253" y="447"/>
         </scene>
