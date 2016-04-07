@@ -13,6 +13,9 @@ class TimerCell: UITableViewCell {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var toggleButton: UIButton!
     
+    @IBInspectable var startColor: UIColor!
+    @IBInspectable var stopColor: UIColor!
+    
     @IBOutlet var dateFormatter: NSDateComponentsFormatter!
     
     var nstimer: NSTimer?
@@ -35,6 +38,9 @@ class TimerCell: UITableViewCell {
                                                              selector: #selector(updateCurrentTime),
                                                              userInfo: nil,
                                                              repeats: true)
+            toggleButton.setTitleColor(stopColor, forState: .Normal)
+        } else {
+            toggleButton.setTitleColor(startColor, forState: .Normal)
         }
     }
     

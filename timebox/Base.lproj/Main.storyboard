@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jvm-72-qd4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fFv-kG-qpi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,9 +14,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timer" id="YBI-n1-kIJ" customClass="TimerCell" customModule="timebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBI-n1-kIJ" id="s2I-6B-p88">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -24,7 +25,9 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaf-QW-HoE" userLabel="Start">
                                             <rect key="frame" x="8" y="7" width="34" height="30"/>
-                                            <state key="normal" title="Start"/>
+                                            <state key="normal" title="Start">
+                                                <color key="titleColor" red="0.90588235855102539" green="0.29803922772407532" blue="0.23529411852359772" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <action selector="timerButtonTapped:" destination="byV-bU-5RS" eventType="touchUpInside" id="dX6-lk-We4"/>
                                             </connections>
@@ -68,7 +71,15 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.18039216101169586" green="0.80000001192092896" blue="0.44313725829124451" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="stopColor">
+                                        <color key="value" red="0.90588235855102539" green="0.29803922772407532" blue="0.23529411852359772" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dateFormatter" destination="b8V-s8-I7E" id="owe-jt-fYb"/>
                                     <outlet property="durationLabel" destination="uFl-1T-ODh" id="27f-ae-9aY"/>
@@ -77,7 +88,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addCell" id="PNC-Nx-8jV" userLabel="AddCell">
-                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PNC-Nx-8jV" id="fSy-Ba-aep">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -85,12 +96,15 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-Te-GcS">
                                             <rect key="frame" x="8" y="8" width="584" height="27"/>
-                                            <state key="normal" title=" "/>
+                                            <state key="normal" title=" Add">
+                                                <color key="titleColor" red="0.58431375026702881" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <action selector="addButtonTapped" destination="byV-bU-5RS" eventType="touchUpInside" id="Lwm-H9-3Pl"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="Uxd-Te-GcS" firstAttribute="leading" secondItem="fSy-Ba-aep" secondAttribute="leadingMargin" id="5pU-Y8-eud"/>
                                         <constraint firstItem="Uxd-Te-GcS" firstAttribute="top" secondItem="fSy-Ba-aep" secondAttribute="topMargin" id="93a-cj-umD"/>
@@ -98,7 +112,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Uxd-Te-GcS" secondAttribute="bottom" id="nAk-9T-VCI"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,25 +131,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSS-Fw-03G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="b8V-s8-I7E" customClass="NSDateComponentsFormatter"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="447"/>
+            <point key="canvasLocation" x="2065" y="447"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Iev-Jq-mE3">
+        <scene sceneID="0xy-sF-RoX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jvm-72-qd4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fFv-kG-qpi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fFk-Ow-NKK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="04y-cx-gME">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="byV-bU-5RS" kind="relationship" relationship="rootViewController" id="u0c-Ge-5ca"/>
+                        <segue destination="byV-bU-5RS" kind="relationship" relationship="rootViewController" id="IZD-62-gbp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Un0-Vo-6mu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6c-Sa-FmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="447"/>
+            <point key="canvasLocation" x="1253" y="447"/>
         </scene>
     </scenes>
 </document>

@@ -14,11 +14,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func timerButtonTapped(button: UIButton) {
+        let timer = timers[button.tag].toggle()
         timers = timers.map {
             (timer) -> Timer in
             return timer.stop()
         }
-        timers[button.tag] = timers[button.tag].toggle()
+        timers[button.tag] = timer
         tableView.reloadData()
     }
     
