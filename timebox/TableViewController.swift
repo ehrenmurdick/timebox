@@ -14,9 +14,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func timerButtonTapped(button: UIButton) {
+        timers = timers.map {
+            (timer) -> Timer in
+            return timer.stop()
+        }
         timers[button.tag] = timers[button.tag].toggle()
-        let indexPath = NSIndexPath(forRow: button.tag, inSection: 0)
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
