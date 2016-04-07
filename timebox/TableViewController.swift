@@ -5,8 +5,12 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
         timers.append(Timer())
+    }
+    
+    @IBAction func addButtonTapped() {
+        self.timers.append(Timer())
+        self.tableView.reloadData()
     }
     
     @IBAction func timerButtonTapped(button: UIButton) {
@@ -19,6 +23,10 @@ class TableViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,5 +43,19 @@ class TableViewController: UITableViewController {
         cell.configureWithTimer(timer, tag: indexPath.row)
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        switch editingStyle {
+        case .Delete:
+            timers.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        default:
+            break
+        }
     }
 }

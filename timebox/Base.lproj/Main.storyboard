@@ -23,42 +23,53 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaf-QW-HoE" userLabel="Start">
-                                            <rect key="frame" x="8" y="8" width="34" height="27"/>
+                                            <rect key="frame" x="8" y="7" width="34" height="30"/>
                                             <state key="normal" title="Start"/>
                                             <connections>
                                                 <action selector="timerButtonTapped:" destination="byV-bU-5RS" eventType="touchUpInside" id="dX6-lk-We4"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-0H-h7f" userLabel="Name">
-                                            <rect key="frame" x="52" y="8" width="45" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFl-1T-ODh" userLabel="0:00">
-                                            <rect key="frame" x="556" y="8" width="36" height="27"/>
+                                            <rect key="frame" x="556" y="11" width="36" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Timer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFx-Ag-L33">
+                                            <rect key="frame" x="52" y="13" width="494" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="DFx-Ag-L33" firstAttribute="centerY" secondItem="s2I-6B-p88" secondAttribute="centerY" id="5H8-s9-VJ4"/>
                                         <constraint firstItem="iaf-QW-HoE" firstAttribute="top" secondItem="s2I-6B-p88" secondAttribute="topMargin" id="7vg-on-sJ0"/>
-                                        <constraint firstItem="o9b-0H-h7f" firstAttribute="top" secondItem="s2I-6B-p88" secondAttribute="topMargin" id="Ck3-Yg-gjd"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="iaf-QW-HoE" secondAttribute="bottom" id="JYE-2X-hRw"/>
+                                        <constraint firstItem="DFx-Ag-L33" firstAttribute="leading" secondItem="iaf-QW-HoE" secondAttribute="trailing" constant="10" id="MVm-Zb-2dW"/>
+                                        <constraint firstItem="iaf-QW-HoE" firstAttribute="centerY" secondItem="s2I-6B-p88" secondAttribute="centerY" id="Q8S-R9-kg9"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="uFl-1T-ODh" secondAttribute="trailing" id="RSm-fg-0e3"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="o9b-0H-h7f" secondAttribute="bottom" id="SoM-0P-x1L"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uFl-1T-ODh" secondAttribute="trailing" id="Vqs-5k-WsN"/>
+                                        <constraint firstItem="uFl-1T-ODh" firstAttribute="leading" secondItem="DFx-Ag-L33" secondAttribute="trailing" constant="10" id="cKf-io-dHS"/>
+                                        <constraint firstItem="uFl-1T-ODh" firstAttribute="centerY" secondItem="s2I-6B-p88" secondAttribute="centerY" id="gKt-zj-kSv"/>
                                         <constraint firstItem="uFl-1T-ODh" firstAttribute="top" secondItem="s2I-6B-p88" secondAttribute="topMargin" id="rNe-2T-lPN"/>
-                                        <constraint firstItem="o9b-0H-h7f" firstAttribute="leading" secondItem="iaf-QW-HoE" secondAttribute="trailing" constant="10" id="sMk-Op-Ni7"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="uFl-1T-ODh" secondAttribute="bottom" id="xbM-m1-3yW"/>
                                         <constraint firstItem="iaf-QW-HoE" firstAttribute="leading" secondItem="s2I-6B-p88" secondAttribute="leadingMargin" id="yNH-Bz-sfW"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="7vg-on-sJ0"/>
+                                            <exclude reference="JYE-2X-hRw"/>
+                                            <exclude reference="RSm-fg-0e3"/>
+                                            <exclude reference="rNe-2T-lPN"/>
+                                            <exclude reference="xbM-m1-3yW"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <connections>
                                     <outlet property="dateFormatter" destination="b8V-s8-I7E" id="owe-jt-fYb"/>
                                     <outlet property="durationLabel" destination="uFl-1T-ODh" id="27f-ae-9aY"/>
-                                    <outlet property="nameLabel" destination="o9b-0H-h7f" id="4Kk-s3-b13"/>
+                                    <outlet property="nameTextField" destination="DFx-Ag-L33" id="Rte-pc-5hS"/>
                                     <outlet property="toggleButton" destination="iaf-QW-HoE" id="ol3-Rk-hlN"/>
                                 </connections>
                             </tableViewCell>
@@ -68,7 +79,13 @@
                             <outlet property="delegate" destination="byV-bU-5RS" id="eow-G9-8rF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1yw-t7-whc"/>
+                    <navigationItem key="navigationItem" id="1yw-t7-whc">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="IWE-GS-IHd">
+                            <connections>
+                                <action selector="addButtonTapped" destination="byV-bU-5RS" id="rsT-tI-nO2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSS-Fw-03G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="b8V-s8-I7E" customClass="NSDateComponentsFormatter"/>

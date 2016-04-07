@@ -4,6 +4,8 @@ struct Timer {
     var startTime: NSDate?
     var savedDuration: NSTimeInterval
     
+    var name: String = ""
+    
     var isActive: Bool {
         return startTime != nil
     }

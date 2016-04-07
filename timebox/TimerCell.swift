@@ -10,7 +10,7 @@ import UIKit
 
 class TimerCell: UITableViewCell {
     @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var nameTextField: UITextField!
     @IBOutlet var toggleButton: UIButton!
     
     @IBOutlet var dateFormatter: NSDateComponentsFormatter!
@@ -22,7 +22,7 @@ class TimerCell: UITableViewCell {
         nstimer?.invalidate()
         durationLabel.text = dateFormatter.stringFromTimeInterval(timer.duration)
         
-        nameLabel.text = "A timer"
+        nameTextField.text = timer.name
         toggleButton.setTitle(timer.prompt, forState: .Normal)
         toggleButton.tag = tag
         
