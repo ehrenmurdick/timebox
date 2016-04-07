@@ -32,7 +32,7 @@
 		723556021CB60B5500D60A66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		723556041CB60BB100D60A66 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		7235560D1CB614E400D60A66 /* TimerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
-		723AF6F71CB60A3800045953 /* timebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		723AF6F71CB60A3800045953 /* Timebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723AF6FA1CB60A3800045953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723AF6FF1CB60A3800045953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		723AF7011CB60A3800045953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		723AF6F81CB60A3800045953 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				723AF6F71CB60A3800045953 /* timebox.app */,
+				723AF6F71CB60A3800045953 /* Timebox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			);
 			name = timebox;
 			productName = timebox;
-			productReference = 723AF6F71CB60A3800045953 /* timebox.app */;
+			productReference = 723AF6F71CB60A3800045953 /* Timebox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -115,10 +115,11 @@
 				TargetAttributes = {
 					723AF6F61CB60A3800045953 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q2HK4MPY3D;
 					};
 				};
 			};
-			buildConfigurationList = 723AF6F21CB60A3800045953 /* Build configuration list for PBXProject "timebox" */;
+			buildConfigurationList = 723AF6F21CB60A3800045953 /* Build configuration list for PBXProject "Timebox" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,14 +271,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = timebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.timebox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.Timebox;
+				PRODUCT_NAME = Timebox;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -285,21 +289,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = timebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.timebox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.Timebox;
+				PRODUCT_NAME = Timebox;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		723AF6F21CB60A3800045953 /* Build configuration list for PBXProject "timebox" */ = {
+		723AF6F21CB60A3800045953 /* Build configuration list for PBXProject "Timebox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				723AF7071CB60A3800045953 /* Debug */,
