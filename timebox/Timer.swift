@@ -2,7 +2,7 @@ import UIKit
 
 struct Timer {
     var startTime: NSDate?
-    var duration: NSTimeInterval
+    var savedDuration: NSTimeInterval
     
     var isActive: Bool {
         return startTime != nil
@@ -16,13 +16,26 @@ struct Timer {
         }
     }
     
+    var currentElapsed: NSTimeInterval {
+        guard let t = startTime else {
+            return 0
+        }
+        
+        let currentTime = NSDate()
+        return currentTime.timeIntervalSinceDate(t)
+    }
+    
+    var duration: NSTimeInterval {
+        return currentElapsed + savedDuration
+    }
+    
     init() {
-        duration = 0
+        savedDuration = 0
     }
     
     init(startTime: NSDate?, duration: NSTimeInterval) {
         self.startTime = startTime
-        self.duration = duration
+        self.savedDuration = duration
     }
     
     func toggle() -> Timer {
@@ -37,17 +50,10 @@ struct Timer {
         guard self.startTime == nil
             else { return self }
         
-        return Timer(startTime: NSDate(), duration: duration)
+        return Timer(startTime: NSDate(), duration: savedDuration)
     }
     
     func stop() -> Timer {
-        guard let startTime = self.startTime
-            else { return self }
-        
-        let currentTime = NSDate()
-        let diff = currentTime.timeIntervalSinceDate(startTime)
-        let newDuration = duration + diff
-        
-        return Timer(startTime: nil, duration: newDuration)
+        return Timer(startTime: nil, duration: duration)
     }
 }

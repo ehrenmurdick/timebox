@@ -15,11 +15,33 @@ class TimerCell: UITableViewCell {
     
     @IBOutlet var dateFormatter: NSDateComponentsFormatter!
     
+    var nstimer: NSTimer?
+    var timer: Timer!
+    
     func configureWithTimer(timer: Timer, tag: Int) {
+        nstimer?.invalidate()
         durationLabel.text = dateFormatter.stringFromTimeInterval(timer.duration)
         
         nameLabel.text = "A timer"
         toggleButton.setTitle(timer.prompt, forState: .Normal)
         toggleButton.tag = tag
+        
+        self.timer = timer
+        
+        if timer.isActive {
+            nstimer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+                                                             target: self,
+                                                             selector: #selector(updateCurrentTime),
+                                                             userInfo: nil,
+                                                             repeats: true)
+        }
+    }
+    
+    func updateCurrentTime() {
+        durationLabel.text = dateFormatter.stringFromTimeInterval(timer.duration)
+    }
+    
+    override func prepareForReuse() {
+        nstimer?.invalidate()
     }
 }
