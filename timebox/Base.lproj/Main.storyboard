@@ -76,6 +76,30 @@
                                     <outlet property="toggleButton" destination="iaf-QW-HoE" id="ol3-Rk-hlN"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addCell" id="PNC-Nx-8jV" userLabel="AddCell">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PNC-Nx-8jV" id="fSy-Ba-aep">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-Te-GcS">
+                                            <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                            <state key="normal" title=" "/>
+                                            <connections>
+                                                <action selector="addButtonTapped" destination="byV-bU-5RS" eventType="touchUpInside" id="Lwm-H9-3Pl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Uxd-Te-GcS" firstAttribute="leading" secondItem="fSy-Ba-aep" secondAttribute="leadingMargin" id="5pU-Y8-eud"/>
+                                        <constraint firstItem="Uxd-Te-GcS" firstAttribute="top" secondItem="fSy-Ba-aep" secondAttribute="topMargin" id="93a-cj-umD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Uxd-Te-GcS" secondAttribute="trailing" id="lpv-Pa-BQN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Uxd-Te-GcS" secondAttribute="bottom" id="nAk-9T-VCI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="byV-bU-5RS" id="9MJ-ld-dgp"/>
