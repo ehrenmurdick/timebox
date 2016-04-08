@@ -9,14 +9,14 @@
         <!--Table View Controller-->
         <scene sceneID="usc-2I-s9g">
             <objects>
-                <tableViewController id="byV-bU-5RS" customClass="TableViewController" customModule="Timebox_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="byV-bU-5RS" customClass="TableViewController" customModule="Timebox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g4p-lK-2bP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timer" id="YBI-n1-kIJ" customClass="TimerCell" customModule="Timebox_temp_caseinsensitive_rename" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timer" id="YBI-n1-kIJ" customClass="TimerCell" customModule="Timebox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBI-n1-kIJ" id="s2I-6B-p88">
@@ -24,7 +24,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaf-QW-HoE" userLabel="Start">
-                                            <rect key="frame" x="8" y="7" width="34" height="30"/>
+                                            <rect key="frame" x="8" y="8" width="47" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <state key="normal" title="Start">
                                                 <color key="titleColor" red="0.90588235855102539" green="0.29803922772407532" blue="0.23529411852359772" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -39,8 +40,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Timer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFx-Ag-L33">
-                                            <rect key="frame" x="52" y="13" width="494" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="68" y="8" width="478" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <outlet property="delegate" destination="byV-bU-5RS" id="4mo-ea-qA9"/>
@@ -49,27 +50,14 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="DFx-Ag-L33" firstAttribute="centerY" secondItem="s2I-6B-p88" secondAttribute="centerY" id="5H8-s9-VJ4"/>
-                                        <constraint firstItem="iaf-QW-HoE" firstAttribute="top" secondItem="s2I-6B-p88" secondAttribute="topMargin" id="7vg-on-sJ0"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="iaf-QW-HoE" secondAttribute="bottom" id="JYE-2X-hRw"/>
-                                        <constraint firstItem="DFx-Ag-L33" firstAttribute="leading" secondItem="iaf-QW-HoE" secondAttribute="trailing" constant="10" id="MVm-Zb-2dW"/>
-                                        <constraint firstItem="iaf-QW-HoE" firstAttribute="centerY" secondItem="s2I-6B-p88" secondAttribute="centerY" id="Q8S-R9-kg9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="uFl-1T-ODh" secondAttribute="trailing" id="RSm-fg-0e3"/>
+                                        <constraint firstItem="iaf-QW-HoE" firstAttribute="top" secondItem="s2I-6B-p88" secondAttribute="topMargin" id="Ig6-bm-crd"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="uFl-1T-ODh" secondAttribute="trailing" id="Vqs-5k-WsN"/>
+                                        <constraint firstItem="DFx-Ag-L33" firstAttribute="leading" secondItem="s2I-6B-p88" secondAttribute="leadingMargin" constant="60" id="X0R-a9-y7D"/>
                                         <constraint firstItem="uFl-1T-ODh" firstAttribute="leading" secondItem="DFx-Ag-L33" secondAttribute="trailing" constant="10" id="cKf-io-dHS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iaf-QW-HoE" secondAttribute="bottom" id="dBG-m2-wLe"/>
                                         <constraint firstItem="uFl-1T-ODh" firstAttribute="centerY" secondItem="s2I-6B-p88" secondAttribute="centerY" id="gKt-zj-kSv"/>
-                                        <constraint firstItem="uFl-1T-ODh" firstAttribute="top" secondItem="s2I-6B-p88" secondAttribute="topMargin" id="rNe-2T-lPN"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="uFl-1T-ODh" secondAttribute="bottom" id="xbM-m1-3yW"/>
                                         <constraint firstItem="iaf-QW-HoE" firstAttribute="leading" secondItem="s2I-6B-p88" secondAttribute="leadingMargin" id="yNH-Bz-sfW"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="7vg-on-sJ0"/>
-                                            <exclude reference="JYE-2X-hRw"/>
-                                            <exclude reference="RSm-fg-0e3"/>
-                                            <exclude reference="rNe-2T-lPN"/>
-                                            <exclude reference="xbM-m1-3yW"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
