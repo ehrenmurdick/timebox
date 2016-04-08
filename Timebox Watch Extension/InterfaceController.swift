@@ -13,7 +13,7 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var table: WKInterfaceTable!
     
-    var session: WCSession!
+//    var session: WCSession!
     
     var runningColor: UIColor! = UIColor ( red: 0.1804, green: 0.8, blue: 0.4431, alpha: 1.0 )
     var stoppedColor: UIColor! = UIColor ( red: 0.9059, green: 0.298, blue: 0.2353, alpha: 1.0 )
@@ -25,19 +25,22 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        table.setNumberOfRows(timers.count, withRowType: "timerRow")
+        self.syncAllTimers()
+
         
-        session = WCSession.defaultSession()
-        
-        session.delegate = self
-        session.activateSession()
-        
-        session.sendMessage(["getTimers" : "all"], replyHandler: {
-            [weak self, weak table, timers](response: [String : AnyObject]) in
-            table?.setNumberOfRows(timers.count, withRowType: "timerRow")
-            self?.syncAllTimers()
-        }) { (error: NSError) in
-            print(error)
-        }
+//        session = WCSession.defaultSession()
+//        
+//        session.delegate = self
+//        session.activateSession()
+//        
+//        session.sendMessage(["getTimers" : "all"], replyHandler: {
+//            [weak self, weak table, timers](response: [String : AnyObject]) in
+//            table?.setNumberOfRows(timers.count, withRowType: "timerRow")
+//            self?.syncAllTimers()
+//        }) { (error: NSError) in
+//            print(error)
+//        }
     }
     
     
