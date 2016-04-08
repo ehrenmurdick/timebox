@@ -19,12 +19,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var stoppedColor: UIColor! = UIColor ( red: 0.9059, green: 0.298, blue: 0.2353, alpha: 1.0 )
     
     var timers: [Timer] = [
-        Timer(startTime: nil, savedDuration: 0, name: "Quit it"),
-        Timer(startTime: nil, savedDuration: 0, name: "Don do"),
+        Timer(startTime: nil, savedDuration: 0, name: "Grindr"),
+        Timer(startTime: nil, savedDuration: 0, name: "Manager Stuff"),
+        Timer(startTime: nil, savedDuration: 0, name: "Email"),
+        Timer(startTime: nil, savedDuration: 0, name: "1:1"),
+        Timer(startTime: nil, savedDuration: 0, name: "More"),
+        Timer(startTime: nil, savedDuration: 0, name: "Mas More"),
+        Timer(startTime: nil, savedDuration: 0, name: "Lots"),
     ]
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        print("awake!")
         table.setNumberOfRows(timers.count, withRowType: "timerRow")
         self.syncAllTimers()
 
