@@ -24,6 +24,7 @@
 		7261D8A31CB75EFD0098B9F1 /* Timebox Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7261D8871CB75EFD0098B9F1 /* Timebox Watch.app */; };
 		7261D8AC1CB7635E0098B9F1 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D8AB1CB7635E0098B9F1 /* Row.swift */; };
 		7261D8AE1CB765E50098B9F1 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723556041CB60BB100D60A66 /* Timer.swift */; };
+		7261D8B31CB7773D0098B9F1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D8B21CB7773D0098B9F1 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		7261D89E1CB75EFD0098B9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7261D8A01CB75EFD0098B9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7261D8AB1CB7635E0098B9F1 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		7261D8B21CB7773D0098B9F1 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				723AF7011CB60A3800045953 /* Assets.xcassets */,
 				723AF7031CB60A3800045953 /* LaunchScreen.storyboard */,
 				723AF7061CB60A3800045953 /* Info.plist */,
+				7261D8B21CB7773D0098B9F1 /* SessionManager.swift */,
 			);
 			path = timebox;
 			sourceTree = "<group>";
@@ -255,13 +258,29 @@
 					723AF6F61CB60A3800045953 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = Q2HK4MPY3D;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					7261D8861CB75EFD0098B9F1 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = Q2HK4MPY3D;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					7261D8921CB75EFD0098B9F1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q2HK4MPY3D;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -323,6 +342,7 @@
 				723556051CB60BB100D60A66 /* Timer.swift in Sources */,
 				723AF6FB1CB60A3800045953 /* AppDelegate.swift in Sources */,
 				723556031CB60B5500D60A66 /* TableViewController.swift in Sources */,
+				7261D8B31CB7773D0098B9F1 /* SessionManager.swift in Sources */,
 				7235560E1CB614E400D60A66 /* TimerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Timebox Watch Extension/Timebox Watch Extension.entitlements";
 				INFOPLIST_FILE = "Timebox Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.Timebox.watchkitapp.watchkitextension;
@@ -520,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Timebox Watch Extension/Timebox Watch Extension.entitlements";
 				INFOPLIST_FILE = "Timebox Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.Timebox.watchkitapp.watchkitextension;
