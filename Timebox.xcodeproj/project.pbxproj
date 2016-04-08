@@ -25,6 +25,7 @@
 		7261D8AC1CB7635E0098B9F1 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D8AB1CB7635E0098B9F1 /* Row.swift */; };
 		7261D8AE1CB765E50098B9F1 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723556041CB60BB100D60A66 /* Timer.swift */; };
 		7261D8B31CB7773D0098B9F1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D8B21CB7773D0098B9F1 /* SessionManager.swift */; };
+		7261D8B51CB77B770098B9F1 /* TimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D8B41CB77B770098B9F1 /* TimerStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		7261D8A01CB75EFD0098B9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7261D8AB1CB7635E0098B9F1 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		7261D8B21CB7773D0098B9F1 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		7261D8B41CB77B770098B9F1 /* TimerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				723AF7031CB60A3800045953 /* LaunchScreen.storyboard */,
 				723AF7061CB60A3800045953 /* Info.plist */,
 				7261D8B21CB7773D0098B9F1 /* SessionManager.swift */,
+				7261D8B41CB77B770098B9F1 /* TimerStore.swift */,
 			);
 			path = timebox;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				723556051CB60BB100D60A66 /* Timer.swift in Sources */,
+				7261D8B51CB77B770098B9F1 /* TimerStore.swift in Sources */,
 				723AF6FB1CB60A3800045953 /* AppDelegate.swift in Sources */,
 				723556031CB60B5500D60A66 /* TableViewController.swift in Sources */,
 				7261D8B31CB7773D0098B9F1 /* SessionManager.swift in Sources */,
