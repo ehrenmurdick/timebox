@@ -10,6 +10,10 @@ struct Timer {
         return startTime != nil
     }
     
+    var apparentStartDate: NSDate {
+        return NSDate(timeIntervalSinceNow: -duration)
+    }
+    
     var prompt: String {
         if isActive {
             return "Stop"

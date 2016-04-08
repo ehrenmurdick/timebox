@@ -8,8 +8,31 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Timebox_Watch" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Timebox_Watch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="9eU-Tb-66e">
+                            <items>
+                                <tableRow identifier="timerRow" id="d3C-tP-aJ3" customClass="Row" customModule="Timebox_Watch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="oa8-eK-mkE">
+                                        <items>
+                                            <label height="1" alignment="left" text="Label" id="6O5-lp-J9q"/>
+                                            <timer height="1" alignment="right" id="6ME-9h-kbM"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="6O5-lp-J9q" id="hv5-Va-Arj"/>
+                                        <outlet property="wktimer" destination="6ME-9h-kbM" id="fvV-Ke-K5R"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="9eU-Tb-66e" id="Oaa-Qe-5b6"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="565" y="324"/>
         </scene>
     </scenes>
 </document>

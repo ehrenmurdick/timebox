@@ -22,6 +22,8 @@
 		7261D89D1CB75EFD0098B9F1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D89C1CB75EFD0098B9F1 /* ComplicationController.swift */; };
 		7261D89F1CB75EFD0098B9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7261D89E1CB75EFD0098B9F1 /* Assets.xcassets */; };
 		7261D8A31CB75EFD0098B9F1 /* Timebox Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7261D8871CB75EFD0098B9F1 /* Timebox Watch.app */; };
+		7261D8AC1CB7635E0098B9F1 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261D8AB1CB7635E0098B9F1 /* Row.swift */; };
+		7261D8AE1CB765E50098B9F1 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723556041CB60BB100D60A66 /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,7 @@
 		7261D89C1CB75EFD0098B9F1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		7261D89E1CB75EFD0098B9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7261D8A01CB75EFD0098B9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7261D8AB1CB7635E0098B9F1 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 				723AF6F91CB60A3800045953 /* timebox */,
 				7261D8881CB75EFD0098B9F1 /* Timebox Watch */,
 				7261D8971CB75EFD0098B9F1 /* Timebox Watch Extension */,
+				7261D8AD1CB765D00098B9F1 /* Shared */,
 				723AF6F81CB60A3800045953 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,7 +146,6 @@
 				723AF6FE1CB60A3800045953 /* Main.storyboard */,
 				7235560D1CB614E400D60A66 /* TimerCell.swift */,
 				723556021CB60B5500D60A66 /* TableViewController.swift */,
-				723556041CB60BB100D60A66 /* Timer.swift */,
 				723AF7011CB60A3800045953 /* Assets.xcassets */,
 				723AF7031CB60A3800045953 /* LaunchScreen.storyboard */,
 				723AF7061CB60A3800045953 /* Info.plist */,
@@ -168,8 +171,18 @@
 				7261D89C1CB75EFD0098B9F1 /* ComplicationController.swift */,
 				7261D89E1CB75EFD0098B9F1 /* Assets.xcassets */,
 				7261D8A01CB75EFD0098B9F1 /* Info.plist */,
+				7261D8AB1CB7635E0098B9F1 /* Row.swift */,
 			);
 			path = "Timebox Watch Extension";
+			sourceTree = "<group>";
+		};
+		7261D8AD1CB765D00098B9F1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				723556041CB60BB100D60A66 /* Timer.swift */,
+			);
+			name = Shared;
+			path = timebox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +334,8 @@
 				7261D89B1CB75EFD0098B9F1 /* ExtensionDelegate.swift in Sources */,
 				7261D8991CB75EFD0098B9F1 /* InterfaceController.swift in Sources */,
 				7261D89D1CB75EFD0098B9F1 /* ComplicationController.swift in Sources */,
+				7261D8AE1CB765E50098B9F1 /* Timer.swift in Sources */,
+				7261D8AC1CB7635E0098B9F1 /* Row.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
