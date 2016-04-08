@@ -4,6 +4,36 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Timebox Watch (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Timebox Watch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Timebox Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>TimeboxWatch (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>TimeboxWatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TimeboxWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>timebox.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +43,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>723AF6F61CB60A3800045953</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7261D85B1CB75E1B0098B9F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7261D8861CB75EFD0098B9F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
