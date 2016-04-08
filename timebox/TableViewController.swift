@@ -40,6 +40,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
+            guard indexPath.row < timers.endIndex else { fatalError("tried to create a cell for a timer index greater than size of timers") }
             guard let cell = tableView.dequeueReusableCellWithIdentifier("timer") as? TimerCell else {
                 fatalError("no cell found with identifier 'timer'")
             }
@@ -59,6 +60,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        guard indexPath.row < timers.endIndex else { return }
         switch editingStyle {
         case .Delete:
             timers.removeAtIndex(indexPath.row)
@@ -71,6 +73,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     // MARK: - Text field delegate
     
     func textFieldDidEndEditing(textField: UITextField) {
+        guard textField.tag < timers.endIndex else { return }
         timers[textField.tag] = timers[textField.tag].rename(textField.text ?? "")
         tableView.reloadData()
     }

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "723AF6F61CB60A3800045953"
-               BuildableName = "Timebox.temp_caseinsensitive_rename.app"
+               BuildableName = "Timebox.app"
                BlueprintName = "timebox"
                ReferencedContainer = "container:Timebox.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "723AF6F61CB60A3800045953"
-            BuildableName = "Timebox.temp_caseinsensitive_rename.app"
+            BuildableName = "Timebox.app"
             BlueprintName = "timebox"
             ReferencedContainer = "container:Timebox.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "723AF6F61CB60A3800045953"
-            BuildableName = "Timebox.temp_caseinsensitive_rename.app"
+            BuildableName = "Timebox.app"
             BlueprintName = "timebox"
             ReferencedContainer = "container:Timebox.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "723AF6F61CB60A3800045953"
-            BuildableName = "Timebox.temp_caseinsensitive_rename.app"
+            BuildableName = "Timebox.app"
             BlueprintName = "timebox"
             ReferencedContainer = "container:Timebox.xcodeproj">
          </BuildableReference>
