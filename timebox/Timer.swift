@@ -1,6 +1,6 @@
 import UIKit
 
-struct Timer {
+class Timer: NSObject, NSCoding {
     var startTime: NSDate?
     var savedDuration: NSTimeInterval
     
@@ -31,6 +31,12 @@ struct Timer {
         return currentElapsed + savedDuration
     }
     
+    init(startTime: NSDate?, savedDuration: NSTimeInterval, name: String) {
+        self.startTime = startTime
+        self.savedDuration = savedDuration
+        self.name = name
+    }
+
     static func empty() -> Timer {
         return Timer(startTime: nil, savedDuration: 0, name: "")
     }
@@ -56,5 +62,27 @@ struct Timer {
     
     func rename(name: String) -> Timer {
         return Timer(startTime: startTime, savedDuration: duration, name: name)
+    }
+    
+// MARK: - NSCoding
+    
+    required convenience init?(coder decoder: NSCoder) {
+        guard let name = decoder.decodeObjectForKey("name") as? String
+            else { return nil }
+        
+        let savedDuration = decoder.decodeDoubleForKey("savedDuration") as NSTimeInterval
+        let startTime = decoder.decodeObjectForKey("startTime") as? NSDate
+        
+        self.init(
+            startTime: startTime,
+            savedDuration:  savedDuration,
+            name: name
+        )
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(startTime, forKey: "startTime")
+        aCoder.encodeDouble(savedDuration, forKey: "savedDuration")
     }
 }

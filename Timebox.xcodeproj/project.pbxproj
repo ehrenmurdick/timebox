@@ -15,7 +15,18 @@
 		723AF7021CB60A3800045953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723AF7011CB60A3800045953 /* Assets.xcassets */; };
 		723AF7051CB60A3800045953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723AF7031CB60A3800045953 /* LaunchScreen.storyboard */; };
 		72A91E321CBCAE2D00A90D4D /* TimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91E311CBCAE2D00A90D4D /* TimerStore.swift */; };
+		72A91E3A1CBCBE9C00A90D4D /* TimeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91E391CBCBE9C00A90D4D /* TimeboxTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72A91E3C1CBCBE9C00A90D4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 723AF6EF1CB60A3800045953 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 723AF6F61CB60A3800045953;
+			remoteInfo = timebox;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		723556091CB612F300D60A66 /* CopyFiles */ = {
@@ -40,10 +51,20 @@
 		723AF7041CB60A3800045953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723AF7061CB60A3800045953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72A91E311CBCAE2D00A90D4D /* TimerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStore.swift; sourceTree = "<group>"; };
+		72A91E371CBCBE9C00A90D4D /* TimeboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A91E391CBCBE9C00A90D4D /* TimeboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxTests.swift; sourceTree = "<group>"; };
+		72A91E3B1CBCBE9C00A90D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		723AF6F41CB60A3800045953 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A91E341CBCBE9B00A90D4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				723AF6F91CB60A3800045953 /* timebox */,
+				72A91E381CBCBE9C00A90D4D /* TimeboxTests */,
 				723AF6F81CB60A3800045953 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				723AF6F71CB60A3800045953 /* Timebox.app */,
+				72A91E371CBCBE9C00A90D4D /* TimeboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +106,15 @@
 				723AF7061CB60A3800045953 /* Info.plist */,
 			);
 			path = timebox;
+			sourceTree = "<group>";
+		};
+		72A91E381CBCBE9C00A90D4D /* TimeboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				72A91E391CBCBE9C00A90D4D /* TimeboxTests.swift */,
+				72A91E3B1CBCBE9C00A90D4D /* Info.plist */,
+			);
+			path = TimeboxTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +138,24 @@
 			productReference = 723AF6F71CB60A3800045953 /* Timebox.app */;
 			productType = "com.apple.product-type.application";
 		};
+		72A91E361CBCBE9B00A90D4D /* TimeboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A91E3E1CBCBE9C00A90D4D /* Build configuration list for PBXNativeTarget "TimeboxTests" */;
+			buildPhases = (
+				72A91E331CBCBE9B00A90D4D /* Sources */,
+				72A91E341CBCBE9B00A90D4D /* Frameworks */,
+				72A91E351CBCBE9B00A90D4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72A91E3D1CBCBE9C00A90D4D /* PBXTargetDependency */,
+			);
+			name = TimeboxTests;
+			productName = TimeboxTests;
+			productReference = 72A91E371CBCBE9C00A90D4D /* TimeboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -119,6 +169,10 @@
 					723AF6F61CB60A3800045953 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = Q2HK4MPY3D;
+					};
+					72A91E361CBCBE9B00A90D4D = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 723AF6F61CB60A3800045953;
 					};
 				};
 			};
@@ -136,6 +190,7 @@
 			projectRoot = "";
 			targets = (
 				723AF6F61CB60A3800045953 /* timebox */,
+				72A91E361CBCBE9B00A90D4D /* TimeboxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -148,6 +203,13 @@
 				723AF7051CB60A3800045953 /* LaunchScreen.storyboard in Resources */,
 				723AF7021CB60A3800045953 /* Assets.xcassets in Resources */,
 				723AF7001CB60A3800045953 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A91E351CBCBE9B00A90D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +228,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72A91E331CBCBE9B00A90D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A91E3A1CBCBE9C00A90D4D /* TimeboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72A91E3D1CBCBE9C00A90D4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 723AF6F61CB60A3800045953 /* timebox */;
+			targetProxy = 72A91E3C1CBCBE9C00A90D4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		723AF6FE1CB60A3800045953 /* Main.storyboard */ = {
@@ -307,6 +385,30 @@
 			};
 			name = Release;
 		};
+		72A91E3F1CBCBE9C00A90D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimeboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.TimeboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timebox.app/Timebox";
+			};
+			name = Debug;
+		};
+		72A91E401CBCBE9C00A90D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimeboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ehrenmurdick.TimeboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timebox.app/Timebox";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +429,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		72A91E3E1CBCBE9C00A90D4D /* Build configuration list for PBXNativeTarget "TimeboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A91E3F1CBCBE9C00A90D4D /* Debug */,
+				72A91E401CBCBE9C00A90D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

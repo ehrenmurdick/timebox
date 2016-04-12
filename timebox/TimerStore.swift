@@ -16,7 +16,7 @@ class TimerStore {
     }
     
     init() {
-        timers = []
+        timers = TimerStore.getSavedTimers()
     }
     
     func inRange(index: Int) -> Bool {
@@ -24,8 +24,8 @@ class TimerStore {
     }
     
     func append() {
-        self.timers.append(Timer.empty())
-
+        timers.append(Timer.empty())
+        saveTimers()
     }
     
     func get(index: Int) -> Timer {
@@ -39,13 +39,36 @@ class TimerStore {
             return timer.stop()
         }
         timers[index] = timer
+        
+        saveTimers()
     }
     
     func delete(index: Int) {
         timers.removeAtIndex(index)
+        saveTimers()
     }
     
     func rename(index: Int, newName: String) {
         timers[index] = timers[index].rename(newName)
+        saveTimers()
     }
+    
+    //    MARK: - Persistence
+
+    class func getSavedTimers() -> [Timer] {
+        guard let data = NSUserDefaults.standardUserDefaults().objectForKey("timers") as? NSData
+            else { return [] }
+        
+        guard let timers = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Timer]
+            else { return [] }
+        
+        
+        return timers
+    }
+    
+    func saveTimers() {
+        let data = NSKeyedArchiver.archivedDataWithRootObject(timers)
+        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "timers")
+    }
+
 }
