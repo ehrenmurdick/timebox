@@ -8,10 +8,9 @@
 
 import UIKit
 
-class TimerCell: UITableViewCell {
+class TimerCell: UICollectionViewCell {
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var toggleButton: UIButton!
     
     @IBInspectable var startColor: UIColor!
     @IBInspectable var stopColor: UIColor!
@@ -26,8 +25,6 @@ class TimerCell: UITableViewCell {
         durationLabel.text = dateFormatter.stringFromTimeInterval(timer.duration)
         
         nameTextField.text = timer.name
-        toggleButton.setTitle(timer.prompt, forState: .Normal)
-        toggleButton.tag = tag
         nameTextField.tag = tag
         
         self.timer = timer
@@ -38,9 +35,9 @@ class TimerCell: UITableViewCell {
                                                              selector: #selector(updateCurrentTime),
                                                              userInfo: nil,
                                                              repeats: true)
-            toggleButton.setTitleColor(stopColor, forState: .Normal)
+            backgroundColor = startColor
         } else {
-            toggleButton.setTitleColor(startColor, forState: .Normal)
+            backgroundColor = stopColor
         }
     }
     
